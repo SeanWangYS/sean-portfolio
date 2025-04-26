@@ -56,12 +56,12 @@ export default function Portfolio() {
         {/* Hero Section */}
         <section className="py-12 md:py-24 lg:py-32 flex flex-col items-center text-center">
           <div className="relative w-32 h-32 mb-8 rounded-full overflow-hidden border-4 border-primary">
-            <Image src="/placeholder.svg?height=128&width=128" alt="Sean Wang" fill className="object-cover" priority />
+            <Image src="/my-notion-face-customized.png?height=128&width=128" alt="Sean Wang" fill className="object-cover" priority />
           </div>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tighter mb-4">Sean Wang</h1>
-          <h2 className="text-xl md:text-2xl text-muted-foreground mb-6">Data Engineer / Data Scientist</h2>
-          <p className="max-w-[42rem] text-muted-foreground mb-8">
-            Working in the data science field for over 3 years, solving business problems by building a data lake, developing a data analysis platform, and designing recommender systems.
+          <h2 className="text-xl md:text-2xl text-muted-foreground mb-6">Data Engineer / Data Backend Engineer</h2>
+          <p className="max-w-[42rem] text-muted-foreground mb-8 text-lg md:text-xl">
+            Working in the data science field for over 5 years, solving business problems by building a data lake, developing a data analysis platform, and designing recommender systems.
           </p>
           <div className="flex flex-col sm:flex-row gap-4">
             <Button asChild>
@@ -84,18 +84,24 @@ export default function Portfolio() {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div>
               <h2 className="text-3xl font-bold tracking-tighter mb-4">About Me</h2>
-              <p className="text-muted-foreground mb-4">
+              <p className="text-muted-foreground mb-4 text-lg md:text-xl">
                 Working in the data science field for over 3 years, solving business problems by building a data lake, developing a data analysis platform, and designing recommender systems.
               </p>
-              <p className="text-muted-foreground mb-4">
+              <p className="text-muted-foreground mb-4 text-lg md:text-xl">
                 Experienced in developing ETL pipelines, Machine Learning models, restful API, data analysis, and data visualization on website user behaviors.
               </p>
-              <p className="text-muted-foreground">
+              <p className="text-muted-foreground text-lg md:text-xl">
                 I'm passionate about using data to solve real business problems and create value through insights and automation.
               </p>
             </div>
-            <div className="relative h-[400px] rounded-lg overflow-hidden">
-              <Image src="/placeholder.svg?height=400&width=600" alt="About me" fill className="object-cover" />
+            <div className="relative h-[500px] w-full rounded-lg overflow-hidden">
+              <Image
+                src="/sean-headshot.JPG?height=400&width=800"
+                alt="About me"
+                fill
+                className="object-contain"
+                priority
+              />
             </div>
           </div>
         </section>
@@ -387,7 +393,7 @@ function ProjectCard({
         <CardTitle>{title}</CardTitle>
       </CardHeader>
       <CardContent className="flex-grow">
-        <p className="text-muted-foreground mb-4">{description}</p>
+        <p className="text-muted-foreground mb-4 text-lg md:text-xl">{description}</p>
         <div className="flex flex-wrap gap-2 mb-4">
           {technologies.map((tech) => (
             <Badge key={tech} variant="outline">
@@ -442,11 +448,11 @@ function ExperienceCard({
         </div>
       </CardHeader>
       <CardContent>
-        <p className="text-muted-foreground mb-4">{description}</p>
-        <h4 className="font-semibold mb-2">Key Achievements:</h4>
+        <p className="text-muted-foreground mb-4 text-lg md:text-xl">{description}</p>
+        <h4 className="font-semibold mb-2 text-lg md:text-xl">Key Achievements:</h4>
         <ul className="list-disc pl-5 space-y-1">
           {achievements.map((achievement, index) => (
-            <li key={index} className="text-muted-foreground">
+            <li key={index} className="text-muted-foreground text-lg md:text-xl">
               {achievement}
             </li>
           ))}
